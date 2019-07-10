@@ -15,11 +15,12 @@ A rule is not immutable. So this application will forget calculated rule after d
   - Upper case character is stay upper case, and has same peer (a => d, then, A => D)  
   - Non-alphabet character is not converted.  
 + Encoded sentence file  
-  - Plain text file (UTF-8/LF)
-  - Encoded sentence is separated by space character. It may contain line-feed-Characters or empty lines.
-  - Also It may contain Non-alphabet character.
+  - text file (UTF-8/LF)
+  - Component words are encoded, and separated by space character. 
+  - It may contain line-feed-Characters or empty lines, Also It may contain Non-alphabet character.
 + Dictionary file  
-  - 暗号化元の文章（平文）の英単語を網羅したデータ。テキストファイル (ASCII) 
+  - text file (ASCII) 
+  - 暗号化元の文章（平文）の英単語を網羅したデータ。
   - 単語は半角空白区切りで並べられている。
   - 平文の英単語を 過不足無く 含んでおり、全て小文字に変換されている。
 
