@@ -8,16 +8,18 @@ This application decodes a sentence by using dictionary. The sentence is encoded
 
 ### Premise
 
+A rule is not immutable. So this application will forget calculated rule after decoding is over.    
+
 + Encoding rule
-  - 固定ではなく、処理ごとに異なるルールで暗号化された入力が与えらえる
-  - 前回の解析情報は再利用できない。  
-+ Encoded sentence
-  - 単語が半角空白で区切られた文章。テキストファイル (UTF-8/LF)  
-  - 暗号元の文章（平文）のアルファベットが、1対1対応で入れ替えられている。 (a => d, b => x, m => a など)  
-  - 大文字は大文字のまま、小文字と同じ文字に変換されている。 (a => d ならばA => D)  
-  - アルファベット以外の文字は、変換されず平文と同じ文字である。  
-+ Dictionary  
-  - 暗号化元の文章（平文）の英単語を網羅したデータ。テキストファイル (ASCII/LF) 
+  - Alphabet is converted to peer character (a => d, b => x, m => a, and so)  
+  - Upper case character is stay upper case, and has same peer (a => d, then, A => D)  
+  - Non-alphabet character is not converted.  
++ Encoded sentence file  
+  - Plain text file (UTF-8/LF)
+  - Encoded sentence is separated by space character. It may contain line-feed-Characters or empty lines.
+  - Also It may contain Non-alphabet character.
++ Dictionary file  
+  - 暗号化元の文章（平文）の英単語を網羅したデータ。テキストファイル (ASCII) 
   - 単語は半角空白区切りで並べられている。
   - 平文の英単語を 過不足無く 含んでおり、全て小文字に変換されている。
 
